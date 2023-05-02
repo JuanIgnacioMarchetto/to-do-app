@@ -30,3 +30,14 @@ botonEnter.addEventListener('click', () => {
  
 
 //agregar funciones de los botones de eliminar y confirmar
+
+//evento para escuchar el boton enter//
+document.addEventListener('keyup', function(event){
+  if(event.key=='Enter'){
+    const tarea= input.value
+    if (tarea) {
+      agregarTarea(tarea)
+      input.value = '';
+    }
+  }
+})
