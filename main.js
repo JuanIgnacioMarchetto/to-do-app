@@ -17,11 +17,19 @@ function agregarTarea(tarea){
   lista.insertAdjacentHTML("beforeend",elemento)
 }
 
-botonEnter.addEventListener('click',()=>{
-  const tarea= input.value
-  if(tarea)
-  {
-  agregarTarea(tarea)   
+botonEnter.addEventListener('click', ()=> {
+  const tarea = input.value
+  if(tarea){
+      agregarTarea(tarea,id,false,false)
+      LIST.push({
+          nombre : tarea,
+          id : id,
+          realizado : false,
+          eliminado : false
+      })
+      localStorage.setItem('TODO',JSON.stringify(LIST))
+      id++
+      input.value = ''
   }
 
 })
