@@ -5,6 +5,7 @@ let id = 0;
 const lista = document.querySelector('#lista');
 const input = document.querySelector('#input');
 const botonEnter = document.querySelector('#boton-enter');
+const check='fa-check-circle'
 //funcion para generar la li correspondiente a cada tarea nueva//aplicar hover hiden a los botones
 function agregarTarea(tarea){
   const elemento =
@@ -18,7 +19,6 @@ function agregarTarea(tarea){
   lista.insertAdjacentHTML("afterend",elemento)
 }
 
-
 //boton para escuchar evento click que chequea si terea existe y si existe envia el imput con valor facio modificado con el nuevo valor ingresado//
 botonEnter.addEventListener('click', () => {
   const tarea = input.value;
@@ -27,9 +27,6 @@ botonEnter.addEventListener('click', () => {
     input.value = '';
   }
 });
- 
-
-//agregar funciones de los botones de eliminar y confirmar
 
 //evento para escuchar el boton enter//
 document.addEventListener('keyup', function(event){
@@ -41,3 +38,9 @@ document.addEventListener('keyup', function(event){
     }
   }
 })
+
+
+///agregar funciones de los botones de eliminar y confirmar
+
+//boton confimar
+

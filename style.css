@@ -1,1 +1,10 @@
 /* usar tailwind??? */
+#elemento .co,
+#elemento .de {
+  display: none;
+}
+
+#elemento:hover .co,
+#elemento:hover .de {
+  display: block;
+}
