@@ -5,7 +5,7 @@ let id = 0;
 const lista = document.querySelector('#lista');
 const input = document.querySelector('#input');
 const botonEnter = document.querySelector('#boton-enter');
-
+//funcion para generar la li correspondiente a cada tarea nueva//aplicar hover hiden a los botones
 function agregarTarea(tarea){
   const elemento =
   `
@@ -19,7 +19,7 @@ function agregarTarea(tarea){
 }
 
 
-
+//boton para escuchar evento click que chequea si terea existe y si existe envia el imput con valor facio modificado con el nuevo valor ingresado//
 botonEnter.addEventListener('click', () => {
   const tarea = input.value;
   if (tarea) {
@@ -28,3 +28,5 @@ botonEnter.addEventListener('click', () => {
   }
 });
  
+
+//agregar funciones de los botones de eliminar y confirmar
