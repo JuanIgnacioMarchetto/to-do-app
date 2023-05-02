@@ -5,14 +5,23 @@ const input= document.querySelector('#input');
 const botonEnter= document.querySelector('#boton-enter');
 
 
-funtion agregarTarea(tarea){
+function agregarTarea(tarea){
   const elemento = 
   `
-                        <li id="elemento">
-                        <i class="far ${REALIZADO}" data="realizado" id="${id}"></i>
-                        <p class="text ${LINE}">${tarea}</p>
-                        <i class="fas fa-trash de" data="eliminado" id="${id}"></i> 
-                        </li>
+  <li id="elemento">
+  <i class="far ${REALIZADO}" data="realizado" id="${id}"></i>
+  <p class="text ${LINE}">${tarea}</p>
+  <i class="fas fa-trash de" data="eliminado" id="${id}"></i> 
+  </li>
   `
   lista.insertAdjacentHTML("beforeend",elemento)
 }
+
+botonEnter.addEventListener('click',()=>{
+  const tarea= input.value
+  if(tarea)
+  {
+  agregarTarea(tarea)   
+  }
+
+})
