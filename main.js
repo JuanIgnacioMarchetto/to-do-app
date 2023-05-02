@@ -20,6 +20,9 @@ function agregarTarea(tarea){
 botonEnter.addEventListener('click', ()=> {
   const tarea = input.value
   if(tarea){
+    
+    /*definir tareas*/
+
       agregarTarea(tarea,id,false,false)
       LIST.push({
           nombre : tarea,
