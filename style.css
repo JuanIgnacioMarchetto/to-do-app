@@ -1,7 +1,12 @@
+
+
 .container {
     max-width: 360px;
     margin: 0 auto;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .agregar-tarea {
