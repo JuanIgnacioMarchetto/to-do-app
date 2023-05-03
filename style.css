@@ -1,81 +1,81 @@
-
 .container {
-    max-width: 360px; 
+    max-width: 360px;
     margin: 0 auto;
     padding: 16px;
-  }
-  
-  .agregar-tarea {
+}
+
+.agregar-tarea {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
-  }
-  
-  .agregar-tarea input[type="text"] {
+}
+
+.agregar-tarea input[type="text"] {
     flex: 1;
     margin-right: 16px;
     padding: 8px;
     font-size: 16px;
     border: none;
     border-bottom: 2px solid #ddd;
-  }
-  
-  .agregar-tarea i {
+}
+
+.agregar-tarea i {
     font-size: 24px;
     color: #888;
     cursor: pointer;
-  }
-  
-  .seccion-tarea {
+}
+
+.seccion-tarea {
     margin-bottom: 16px;
-  }
-  
-  #lista {
+}
+
+#lista {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  #lista li {
+}
+
+#lista li {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-  }
-  
-  #lista li .co,
-  #lista li .de {
+}
+
+#lista li .co,
+#lista li .de {
     display: none;
-  }
-  
-  #lista li:hover .co,
-  #lista li:hover .de {
+}
+
+#lista li:hover .co,
+#lista li:hover .de {
     display: block;
-  }
-  
-  #lista li .co {
+}
+
+#lista li .co {
     margin-right: 8px;
     font-size: 16px;
     color: #888;
     cursor: pointer;
-  }
-  
-  #lista li .text {
+}
+
+#lista li .text {
     flex: 1;
     margin-right: 8px;
     font-size: 16px;
-  }
-  
-  #lista li .de {
+}
+
+#lista li .de {
     font-size: 16px;
     color: #f00;
     cursor: pointer;
-  }
+}
+
 #elemento .co,
 #elemento .de {
-  display: none;
+    display: none;
 }
 
 #elemento:hover .co,
 #elemento:hover .de {
-  display: block;
+    display: block;
 }
