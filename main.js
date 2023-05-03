@@ -19,6 +19,8 @@ function agregarTarea(tarea) {//funcion para crear el html necesario para ver la
   lista.insertAdjacentHTML("afterend", elemento)
   LIST.push(tarea); // agrega  tarea nueva al array 
   console.log(LIST); // se ve el array en la consola
+  /*agregar el boolean del circulo de confirmacion en false y que cambie a true cuando se oprime el boton
+  y que sea visible desde la consola*/
 }
 
 botonEnter.addEventListener('click', () => {//escucha el clicl del mouse y envia la nueva tarea a la funcion
