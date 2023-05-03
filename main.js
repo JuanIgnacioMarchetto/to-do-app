@@ -2,10 +2,12 @@ const LIST = [];// constante LIST  (array vacío)
 const lista = document.querySelector('#lista');// busca el id lista y lo mete en la variable
 const input = document.querySelector('#input');// busca el id input y lo mete en la variable
 const botonEnter = document.querySelector('#boton-enter');// busca el id boton-enter y lo mete en la variable
-const check = 'fa-check-circle'
+const check = 'fa-check-circle'// 
+// "check" = "fa-check-circle" (circulo de confirmacion)
 let id = 0;
 
-function agregarTarea(tarea) {
+
+function agregarTarea(tarea) {//funcion para crear el html necesario para ver la tarjeta de tarea creada
   const elemento =
     `
     <li id="elemento">
@@ -15,11 +17,11 @@ function agregarTarea(tarea) {
     </li>
   `
   lista.insertAdjacentHTML("afterend", elemento)
-  LIST.push(tarea); // Agrega  tarea nueva al array 
-  console.log(LIST); // array en la consola
+  LIST.push(tarea); // agrega  tarea nueva al array 
+  console.log(LIST); // se ve el array en la consola
 }
 
-botonEnter.addEventListener('click', () => {
+botonEnter.addEventListener('click', () => {//escucha el clicl del mouse y envia la nueva tarea a la funcion
   const tarea = input.value;
   if (tarea) {
     agregarTarea(tarea);
@@ -27,7 +29,7 @@ botonEnter.addEventListener('click', () => {
   }
 });
 
-document.addEventListener('keyup', function (event) {
+document.addEventListener('keyup', function (event) {//escucha cuando se oprime enter y envia la nueva tarea a la funcion
   if (event.key == 'Enter') {
     const tarea = input.value
     if (tarea) {
