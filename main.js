@@ -9,12 +9,12 @@ let id = 0;
 
 function agregarTarea(tarea) {//funcion para crear el html necesario para ver la tarjeta de tarea creada
   const elemento =
-    `<div class="flex items-center">
-    <li id="elemento" class="tarea flex justify-between items-center fixed bottom-0 right-0">
-    <p class="text ">${tarea}</p>
-    <i class="far fa-circle co" data="realizado" style="position: absolute;  right: 48px;"; id="0"></i>
-    <i class="fas fa-trash de" data="eliminado"  style="position: absolute;  right: 32px;";id="0"></i>
-    </li>
+    `<div class="flex items-center"style="width: 50%;  padding-right: 40px;">
+    <li id="elemento" class="tarea flex justify-between items-center fixed bottom-0 right-0" style="list-style: none;">
+    <p class="text">${tarea}</p>
+    <i class="far fa-circle co" data="realizado" style="position: absolute; right: 48px;top: 90px;"></i>
+    <i class="fas fa-trash de" data="eliminado" style="position: absolute; right: 30px;top: 90px; ;"></i>
+</li>
     </div>
   `
   lista.insertAdjacentHTML("afterend", elemento)
