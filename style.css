@@ -77,7 +77,28 @@
     color: #f00;
     cursor: pointer;
 }
+#elemento .co {
+    margin-right: 8px;
+    font-size: 16px;
+    color: #888;
+    cursor: pointer;
+    order: 2; }
+    
+#elemento .text {
+    flex: 1;
+    margin-right: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center; 
+    order: 1;
+}
 
+#elemento .de {
+    font-size: 16px;
+    color: #f00;
+    cursor: pointer;
+    order: 3; 
+}
 #elemento .co,
 #elemento .de {
     display: none;

@@ -10,7 +10,7 @@ let id = 0;
 function agregarTarea(tarea) {//funcion para crear el html necesario para ver la tarjeta de tarea creada
   const elemento =
     `
-    <li id="elemento">
+    <li id="elemento" class="tarea">
       <i class="far fa-circle co" data="realizado" id="0"></i>
       <p class="text ">${tarea}</p>
       <i class="fas fa-trash de" data="eliminado" id="0"></i>
