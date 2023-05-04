@@ -44,21 +44,19 @@ document.addEventListener('keyup', function (event) {//escucha cuando se oprime 
   }
 })
 //agregar funcion a boton eliminar y a boton confirmar
-const botonEliminar = document.querySelector('.de');
-  botonEliminar.addEventListener('click', eliminarTarea);
-  
-  console.log(LIST);/* 
-  Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
-    at main.js:48:17
- */
+// CORREGIDO: utilizar querySelectorAll en lugar de querySelector para obtener una lista de todos los botones de eliminar
+const botonesEliminar = document.querySelectorAll('.de');
+botonesEliminar.forEach((boton) => {
+  boton.addEventListener('click', eliminarTarea);
+});
+
+console.log(LIST);
+
 function eliminarTarea(event) {
-  const elemento = event.target.parentElement;
+  const elemento = event.target.parentElement.parentElement; // CORREGIDO: utilizar parentElement dos veces para obtener el elemento 'li' en lugar de 'div'
   const tarea = elemento.querySelector('.text').textContent;
   const index = LIST.indexOf(tarea);
-  
-  // Elimina elemento de la en index en el array
   lista.removeChild(elemento);
   LIST.splice(index, 1);
-  
   console.log(LIST);
 }
