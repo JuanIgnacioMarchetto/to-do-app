@@ -62,6 +62,17 @@ document.addEventListener('click', function (event) {
     event.target.parentElement.parentElement.remove(); // elimina el elemento HTML correspondiente
     console.log(LIST);
   }
-});/* 
-calculadora.js:49 Uncaught TypeError: Cannot set properties of undefined (setting 'realizado')
-    at HTMLDocument.<anonymous> */
+});document.addEventListener('click', function (event) {
+    if (event.target && event.target.classList.contains('co')) {
+      const id = parseInt(event.target.parentElement.parentElement.getAttribute('id'));
+      const index = LIST.findIndex(item => item.id === id);
+      if (index !== -1) { // cheque si la tarea existe en el array
+        LIST[index].realizado = true; // cambia  a true
+        event.target.classList.add('fa-check-circle');
+        event.target.classList.remove('fa-circle');
+        event.target.setAttribute('data-realizado', 'true');
+        console.log(LIST[index].realizado); // el  boleano actualizado en consola
+      }
+    }
+  });
+  
