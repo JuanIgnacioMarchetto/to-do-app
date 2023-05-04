@@ -43,9 +43,8 @@ document.addEventListener('keyup', function (event) {//escucha cuando se oprime 
     }
   }
 })
-//agregar funcion a boton eliminar y a boton confirmar
-// CORREGIDO: utilizar querySelectorAll en lugar de querySelector para obtener una lista de todos los botones de eliminar
 const botonesEliminar = document.querySelectorAll('.de');
+
 botonesEliminar.forEach((boton) => {
   boton.addEventListener('click', eliminarTarea);
 });
@@ -57,6 +56,6 @@ function eliminarTarea(event) {
   const tarea = elemento.querySelector('.text').textContent;
   const index = LIST.indexOf(tarea);
   lista.removeChild(elemento);
-  LIST.splice(index, 1);
+  LIST.splice(index, 1);//  elimina array 'LIST'
   console.log(LIST);
 }
