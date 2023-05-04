@@ -9,13 +9,15 @@ let id = 0;
 
 function agregarTarea(tarea) {//funcion para crear el html necesario para ver la tarjeta de tarea creada
   const elemento =
-    `<div class="flex items-center"style="width: 50%;  padding-right: 40px;">
-    <li id="elemento" class="tarea flex justify-between items-center fixed bottom-0 right-0" style="list-style: none;">
+  `<div class="flex items-center" style="width: 50%; padding-right: 40px;background: #888">
+  <li id="elemento" class="tarea flex justify-between items-center fixed bottom-0 right-0" style="list-style: none; display: flex; justify-content: flex-end;   justify-content: space-between; margin: 5%;">
     <p class="text">${tarea}</p>
-    <i class="far fa-circle co" data="realizado" style="position: absolute; right: 48px;top: 90px;"></i>
-    <i class="fas fa-trash de" data="eliminado" style="position: absolute; right: 30px;top: 90px; ;"></i>
-</li>
+    <div style="display: flex;">
+      <i class="far fa-circle co" data="realizado" style="magin:5%;"></i>
+      <i class="fas fa-trash de" data="eliminado" style="magin:5% ; "></i>
     </div>
+  </li>
+</div>
   `
   lista.insertAdjacentHTML("afterend", elemento)
   LIST.push(tarea); // agrega  tarea nueva al array 
@@ -41,3 +43,4 @@ document.addEventListener('keyup', function (event) {//escucha cuando se oprime 
     }
   }
 })
+//agregar funcion a boton eliminar y a boton confirmar
