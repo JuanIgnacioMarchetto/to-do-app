@@ -43,8 +43,9 @@ document.addEventListener('keyup', function (event) {//escucha cuando se oprime 
     }
   }
 })
-const botonesEliminar = document.querySelectorAll('.de');
 
+/* //agregar funcion a boton eliminar y a boton confirmar
+const botonesEliminar = document.querySelectorAll('.de');
 botonesEliminar.forEach((boton) => {
   boton.addEventListener('click', eliminarTarea);
 });
@@ -52,10 +53,12 @@ botonesEliminar.forEach((boton) => {
 console.log(LIST);
 
 function eliminarTarea(event) {
-  const elemento = event.target.parentElement.parentElement; // CORREGIDO: utilizar parentElement dos veces para obtener el elemento 'li' en lugar de 'div'
+  const elemento = event.target.parentElement.parentElement; // obtener el elemento 'li'
   const tarea = elemento.querySelector('.text').textContent;
   const index = LIST.indexOf(tarea);
-  lista.removeChild(elemento);
-  LIST.splice(index, 1);//  elimina array 'LIST'
-  console.log(LIST);
-}
+  LIST.splice(index, 1);
+  elemento.remove(); 
+  console.log(LIST);} */
+
+
+  
