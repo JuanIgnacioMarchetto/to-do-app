@@ -7,12 +7,12 @@ let id = 0;
 
 function agregarTarea(tarea) {
   const elemento =
-    `<div class="flex items-center" style="width: 50%; padding-right: 40px; flex: 1; margin-right: 16px;padding-right: 8px; font-size: 16px;border: none; border-bottom: 2px solid #ddd;">
+    `<div class="flex items-center" style="; padding-right: 40px; flex: 1; margin-right: 16px;padding-right: 8px; font-size: 16px;border: none; ;">
       <li class="tarea flex justify-between items-center" style="list-style: none; display: flex; justify-content: flex-end;   justify-content: space-between; margin: 5%;">
         <p class="text">${tarea}</p>
-        <div style="display: flex;">
-          <i class="far fa-circle co" data-realizado="false" style="margin:5%;"></i>
-          <i class="fas fa-trash de" data-eliminado="false" style="margin:5%;"></i>
+        <div style="display: flex;margin-top: 20px; " >
+          <i class="far fa-circle co" data-realizado="false";style="margin-right:10; "></i>
+          <i class="fas fa-trash de" data-eliminado="false";style="margin-right:10;" ></i>
         </div>
       </li>
     </div>`;
