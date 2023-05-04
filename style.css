@@ -1,22 +1,17 @@
-
-
 .container {
     max-width: 360px;
     margin: 0 auto;
     padding: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center;    
 }
-
 .agregar-tarea {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
     justify-content: space-between;
 }
-
 .agregar-tarea input[type="text"] {
     flex: 1;
     margin-right: 16px;
@@ -25,72 +20,18 @@
     border: none;
     border-bottom: 2px solid #ddd;
 }
-
 .agregar-tarea i {
     font-size: 24px;
     color: #888;
     cursor: pointer;
 }
-
 .seccion-tarea {
     margin-bottom: 16px;
-}
-
-#lista {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#lista li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-#lista li .co,
-#lista li .de {
-    display: none;
-}
-
-#lista li:hover .co,
-#lista li:hover .de {
-    display: block;
-}
-
-#lista li .co  {
-    margin-right: 8px;
-    font-size: 16px;
-    color: #888;
-    cursor: pointer;
-    ;
-}
-
-#lista li .text {
-    flex: 1;
-    margin-right: 8px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    ;
-}
-
-#lista li .de {
-    font-size: 16px;
-    color: #f00;
-    cursor: pointer;
-}
-#elemento .de {
-    font-size: 16px;
-    color: #f00;
-    cursor: pointer;
-    order: 3; 
 }
 #elemento .co,
 #elemento .de {
     display: none;
 }
-
 #elemento:hover .co,
 #elemento:hover .de {
     display: block;

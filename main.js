@@ -13,8 +13,8 @@ function agregarTarea(tarea) {//funcion para crear el html necesario para ver la
   <li id="elemento" class="tarea flex justify-between items-center fixed bottom-0 right-0" style="list-style: none; display: flex; justify-content: flex-end;   justify-content: space-between; margin: 5%;">
     <p class="text">${tarea}</p>
     <div style="display: flex;">
-      <i class="far fa-circle co" data="realizado" style="magin:5%;"></i>
-      <i class="fas fa-trash de" data="eliminado" style="magin:5% ; "></i>
+      <i class="far fa-circle co" data="realizado" style="padding-right:5%;"></i>
+      <i class="fas fa-trash de" data="eliminado" style="pagin:5% ; "></i>
     </div>
   </li>
 </div>
@@ -59,6 +59,5 @@ function eliminarTarea(event) {
   LIST.splice(index, 1);
   elemento.remove(); 
   console.log(LIST);} */
-
 
   

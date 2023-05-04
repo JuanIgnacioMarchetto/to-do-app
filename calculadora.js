@@ -7,7 +7,7 @@ let id = 0;
 
 function agregarTarea(tarea) {
   const elemento =
-    `<div class="flex items-center" style="width: 50%; padding-right: 40px;background: #888">
+    `<div class="flex items-center" style="width: 50%; padding-right: 40px; flex: 1; margin-right: 16px;padding-right: 8px; font-size: 16px;border: none; border-bottom: 2px solid #ddd;">
       <li class="tarea flex justify-between items-center" style="list-style: none; display: flex; justify-content: flex-end;   justify-content: space-between; margin: 5%;">
         <p class="text">${tarea}</p>
         <div style="display: flex;">
@@ -44,15 +44,15 @@ document.addEventListener('keyup', function (event) {
 
 // Agrega un evento click al icono de confirmación
 document.addEventListener('click', function (event) {
-  if (event.target && event.target.classList.contains('co')) {
-    const index = LIST.findIndex(item => item.id === parseInt(event.target.parentElement.parentElement.getAttribute('id')));
-    LIST[index].realizado = true; // cambia el valor booleano de realizado a true
-    event.target.classList.add('fa-check-circle');
-    event.target.classList.remove('fa-circle');
-    event.target.setAttribute('data-realizado', 'true');
-    console.log(LIST[index].realizado); // imprime el valor booleano actualizado en consola
-  }
-});
+    if (event.target && event.target.classList.contains('co')) {
+      const index = LIST.findIndex(item => item.id === parseInt(event.target.parentElement.parentElement.getAttribute('data-id')));
+      LIST[index].realizado = true; // cambia el valor booleano de realizado a true
+      event.target.classList.add('fa-check-circle');
+      event.target.classList.remove('fa-circle');
+      event.target.setAttribute('data-realizado', 'true');
+      console.log(LIST[index].realizado); // el  boleano actualizado en consola
+    }
+  });
 
 // Agrega un evento click al icono de eliminación
 document.addEventListener('click', function (event) {
