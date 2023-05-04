@@ -44,3 +44,20 @@ document.addEventListener('keyup', function (event) {//escucha cuando se oprime 
   }
 })
 //agregar funcion a boton eliminar y a boton confirmar
+const botonEliminar = document.querySelector('.de');
+  botoneliminar.addEventListener('click', eliminarTarea);
+  
+  console.log(LIST);
+}
+
+function eliminarTarea(event) {
+  const elemento = event.target.parentElement;
+  const tarea = elemento.querySelector('.text').textContent;
+  const index = LIST.indexOf(tarea);
+  
+  // Elimina elemento de la en index en el array
+  lista.removeChild(elemento);
+  LIST.splice(index, 1);
+  
+  console.log(LIST);
+}
