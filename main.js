@@ -45,11 +45,12 @@ document.addEventListener('keyup', function (event) {//escucha cuando se oprime 
 })
 //agregar funcion a boton eliminar y a boton confirmar
 const botonEliminar = document.querySelector('.de');
-  botoneliminar.addEventListener('click', eliminarTarea);
+  botonEliminar.addEventListener('click', eliminarTarea);
   
-  console.log(LIST);
-}
-
+  console.log(LIST);/* 
+  Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+    at main.js:48:17
+ */
 function eliminarTarea(event) {
   const elemento = event.target.parentElement;
   const tarea = elemento.querySelector('.text').textContent;
