@@ -62,4 +62,6 @@ document.addEventListener('click', function (event) {
     event.target.parentElement.parentElement.remove(); // elimina el elemento HTML correspondiente
     console.log(LIST);
   }
-});
+});/* 
+calculadora.js:49 Uncaught TypeError: Cannot set properties of undefined (setting 'realizado')
+    at HTMLDocument.<anonymous> */
