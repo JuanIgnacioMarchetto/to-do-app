@@ -28,12 +28,13 @@
 .seccion-tarea {
     margin-bottom: 16px;
 }
-#elemento .co,
-#elemento .de {
-    display: none;
+
+.confirmacion,
+.de {
+  visibility: hidden;
 }
-#elemento:hover .co,
-#elemento:hover .de {
-    display: block;
-    
+
+.tarea:hover .confirmacion,
+.tarea:hover .de {
+  visibility: visible;
 }

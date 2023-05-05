@@ -39,7 +39,6 @@ document.addEventListener('keyup', function (event) {//escucha el boton enter y 
     }
   }
 });
-
 // escucha el botón de confirmación y cambia el valor booleano en el array
 document.addEventListener('click', function (event) {
   if (event.target && event.target.classList.contains('confirmacion')) {
