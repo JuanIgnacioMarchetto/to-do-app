@@ -1,4 +1,3 @@
-
 .container {
     max-width: 360px;
     margin: 0 auto;
@@ -20,16 +19,15 @@
     font-size: 16px;
     border: none;
     border-bottom: 2px solid #ddd;
-    border-left:3px solid #8d7373;
-    border-right:3px solid #5a4848;
-    
 }
 .agregar-tarea i {
-    font-size:medium;
+    font-size: 24px;
     color: #888;
     cursor: pointer;
 }
-
+.seccion-tarea {
+    margin-bottom: 16px;
+}
 #elemento .co,
 #elemento .de {
     display: none;
@@ -37,4 +35,5 @@
 #elemento:hover .co,
 #elemento:hover .de {
     display: block;
+    
 }

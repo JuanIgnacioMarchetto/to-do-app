@@ -1,4 +1,4 @@
-const LIST = [//boolean:realizado=false;tarea=nombre de la tarea]; // constante LIST (array vacío)
+const LIST = [];//boolean:realizado=false;tarea=nombre de la tarea]; // constante LIST (array vacío)//
 const lista = document.querySelector('#lista'); // busca el id lista y lo mete en la variable
 const input = document.querySelector('#input'); // busca el id input y lo mete en la variable
 const botonEnter = document.querySelector('#boton-enter'); // busca el id boton-enter y lo mete en la variable
@@ -21,6 +21,7 @@ function agregarTarea(tarea) {
   console.log(LIST); // se ve el array en la consola  
   id++;
 }
+
 botonEnter.addEventListener('click', () => {//escucha el click del mouse y muestra la tarea
   const tarea = input.value;
   if (tarea) {
@@ -28,6 +29,7 @@ botonEnter.addEventListener('click', () => {//escucha el click del mouse y muest
     input.value = '';
   }
 });
+
 document.addEventListener('keyup', function (event) {//escucha el boton enter y muestra la tarea
   if (event.key == 'Enter') {
     const tarea = input.value;
@@ -37,6 +39,7 @@ document.addEventListener('keyup', function (event) {//escucha el boton enter y 
     }
   }
 });
+
 // escucha el botón de confirmación y cambia el valor booleano en el array
 document.addEventListener('click', function (event) {
   if (event.target && event.target.classList.contains('confirmacion')) {
