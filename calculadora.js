@@ -43,7 +43,7 @@ document.addEventListener('keyup', function (event) {
 });
 
 // escucha el boton comfirmacion y cambia su booleano
-document.addEventListener('click', function (event) {
+document.addEventListener('click',"afterend",realizado, elemento, function (event) {
     if (event.target && event.target.classList.contains('co')) {
       const index = LIST.findIndex(item => item.id === parseInt(event.target.parentElement.parentElement.getAttribute('data-id')));
       LIST[index].realizado = true; // cambia el valor booleano de realizado a true
