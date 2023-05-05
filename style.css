@@ -20,6 +20,9 @@
     font-size: 16px;
     border: none;
     border-bottom: 2px solid #ddd;
+    border-left:3px solid #8d7373;
+    border-right:3px solid #5a4848;
+    
 }
 .agregar-tarea i {
     font-size:medium;
