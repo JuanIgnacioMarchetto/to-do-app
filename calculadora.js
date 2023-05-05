@@ -42,7 +42,7 @@ document.addEventListener('keyup', function (event) {
   }
 });
 
-// Agrega un evento click al icono de confirmación
+// escucha el boton comfirmacion y cambia su booleano
 document.addEventListener('click', function (event) {
     if (event.target && event.target.classList.contains('co')) {
       const index = LIST.findIndex(item => item.id === parseInt(event.target.parentElement.parentElement.getAttribute('data-id')));
@@ -54,7 +54,7 @@ document.addEventListener('click', function (event) {
     }
   });
 
-// Agrega un evento click al icono de eliminación
+// escucha el boton de eliminación y elimina el array y el elemento html
 document.addEventListener('click', function (event) {
   if (event.target && event.target.classList.contains('de')) {
     const index = LIST.findIndex(item => item.id === parseInt(event.target.parentElement.parentElement.getAttribute('id')));
@@ -62,17 +62,5 @@ document.addEventListener('click', function (event) {
     event.target.parentElement.parentElement.remove(); // elimina el elemento HTML correspondiente
     console.log(LIST);
   }
-});document.addEventListener('click', function (event) {
-    if (event.target && event.target.classList.contains('co')) {
-      const id = parseInt(event.target.parentElement.parentElement.getAttribute('id'));
-      const index = LIST.findIndex(item => item.id === id);
-      if (index !== -1) { // cheque si la tarea existe en el array
-        LIST[index].realizado = true; // cambia  a true
-        event.target.classList.add('fa-check-circle');
-        event.target.classList.remove('fa-circle');
-        event.target.setAttribute('data-realizado', 'true');
-        console.log(LIST[index].realizado); // el  boleano actualizado en consola
-      }
-    }
-  });
+})
   
